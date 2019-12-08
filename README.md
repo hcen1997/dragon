@@ -9,3 +9,6 @@ compiler.principle,techniques,tools
 ### test
 > 2+3 *5;
 > 12 div 5 mod 2;
+
+### todo
+1. fix stack-process: segmentation fault
