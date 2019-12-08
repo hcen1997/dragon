@@ -34,7 +34,7 @@ process() {
       push(tmp1 / tmp2);
     } else if (t == EOF) {
       result = pop();
-      printf("%d", result)
+      printf("%d", result);
     } else {
       fprintf(stderr, "error in processing.");
       exit(1);
