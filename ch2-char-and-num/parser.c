@@ -33,8 +33,10 @@ term() {
   while (1) {
     switch (lookahead) {
       case '*':
-      case:
-        '/' : case DIV : case MOD : t = lookahead;
+      case '/':
+      case DIV:
+      case MOD:
+        t = lookahead;
         match(lookahead);
         factor();
         emit(t, NONE);
@@ -53,10 +55,12 @@ factor() {
       break;
     case NUM:
       emit(NUM, tokenval);
-      match(NUM) break;
+      match(NUM);
+      break;
     case ID:
       emit(ID, tokenval);
-      match(ID) break;
+      match(ID);
+      break;
     default:
       error("syntax error");
   }

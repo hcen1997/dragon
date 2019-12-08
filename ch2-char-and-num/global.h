@@ -28,4 +28,4 @@ struct entry {
 };
 
 // 符号表
-struct entry symtable {};
+struct entry symtable[];
