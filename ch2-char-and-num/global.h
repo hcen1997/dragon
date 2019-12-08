@@ -3,6 +3,8 @@
 
 // 输入输出
 #include <stdio.h>
+// 字符串
+#include <string.h>
 // 加载字符测试程序
 #include <ctype.h>
 
