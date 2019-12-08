@@ -27,10 +27,44 @@ expr() {
     }
   }
 }
-term(){
-
+term() {
+  int t;
+  factor();
+  while (1) {
+    switch (lookahead) {
+      case '*':
+      case:
+        '/' : case DIV : case MOD : t = lookahead;
+        match(lookahead);
+        factor();
+        emit(t, NONE);
+        continue;
+      default:
+        return;
+    }
+  }
 }
-factor(){
-
+factor() {
+  switch (lookahead) {
+    case '(':
+      match('(');
+      expr();
+      match(')');
+      break;
+    case NUM:
+      emit(NUM, tokenval);
+      match(NUM) break;
+    case ID:
+      emit(ID, tokenval);
+      match(ID) break;
+    default:
+      error("syntax error");
+  }
 }
-match(t){}
+match(int t) {
+  if (lookahead == t) {
+    lookahead = lexan();
+  } else {
+    error("syntax error");
+  }
+}
