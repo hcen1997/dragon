@@ -12,7 +12,7 @@ process() {
       ungetc(t, stdin);
       scanf("%d", &val);
       if (val != NONE) {
-        push(val)
+        push(val);
       } else {
         fprintf(stderr, "error in scanf.");
       }
